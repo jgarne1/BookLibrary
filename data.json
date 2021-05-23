@@ -6,9 +6,11 @@
 }, {
 	"title": "The LotR",
 	"author": "Tolkien",
-	"numberOfPages": 30
+	"numberOfPages": 30,
+	"isRead": true
 }, {
 	"title": "sim",
 	"author": "Tolkien",
-	"numberOfPages": 33
+	"numberOfPages": 33,
+	"isRead": true
 }]
