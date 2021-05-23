@@ -1,1 +1,14 @@
-{"author":"Tolkien","title":"The Hobbit","numberOfPages":27,"readStatus":true},{"author":"JK","title":"Harry Potter","numberOfPages":30,"readStatus":false},{"author":"Ryan","title":"Why Thailand is scary","numberOfPages":33,"readStatus":false}
+[{
+	"title": "The Hobbit",
+	"author": "Tolkien",
+	"numberOfPages": 27,
+	"isRead": true
+}, {
+	"title": "The LotR",
+	"author": "Tolkien",
+	"numberOfPages": 30
+}, {
+	"title": "sim",
+	"author": "Tolkien",
+	"numberOfPages": 33
+}]
