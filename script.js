@@ -34,7 +34,7 @@ function loadMyLibrary(jsonBook){
     bookToLoad.author = jsonBook['author'];
     bookToLoad.title = jsonBook['title'];
     bookToLoad.numberOfPages = jsonBook['numberOfPages'];
-    bookToLoad.readStatus = jsonBook['isRead'];
+    bookToLoad.readStatus = jsonBook['readStatus'];
     if(jsonBook['url']){
         bookToLoad.url = jsonBook['url'];
     }
@@ -50,14 +50,14 @@ function addBookToLibrary(bookToAdd) {
 
 function displayBooks() {
     //let text = "";
-    let text2="";
+    let text="";
     let len = myLibrary.length;
     for (i = 0; i < len; i++) {
-        text2 += CreateBookCard(myLibrary[i]);
+        text += CreateBookCard(myLibrary[i]);
     }
-    text2 +="</div>";
+    text +="</div>";
     //document.getElementById("bookList").innerHTML = text;
-    document.getElementById("bookCards").innerHTML = text2;
+    document.getElementById("bookCards").innerHTML = text;
 };
 
 
