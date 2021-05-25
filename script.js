@@ -2,7 +2,7 @@ let myLibrary = [];
 let requestURL="";// = 'https://jgarne1.github.io/BookLibrary/data.json';
 requestURL='https://json.extendsclass.com/bin/27ff3081cb53';
 let request = new XMLHttpRequest();
-
+let  tempBookID = null;
 //Book constructor
 function Book(author, title, numberOfPages, readStatus) {
     this.author = author;
@@ -53,7 +53,7 @@ function displayBooks() {
     let text="";
     let len = myLibrary.length;
     for (i = 0; i < len; i++) {
-        text += CreateBookCard(myLibrary[i]);
+        text += CreateBookCard(myLibrary[i],i);
     }
     text +="</div>";
     //document.getElementById("bookList").innerHTML = text;
@@ -79,7 +79,8 @@ function Submit() {
 };
 
 
-function CreateBookCard(book){
+function CreateBookCard(book,bookID){
+    tempBookID =bookID;
     let checkStatus ="";
     if (book.readStatus){
         checkStatus="checked";
@@ -89,13 +90,18 @@ function CreateBookCard(book){
         '<div class = bookCardContent>' + 
             '<p>' +'Author:' + book.author +'<br> Title:' + book.title +'<br> Number of pages:' + book.numberOfPages  + '<br></p>' + 
         '</div><br>' + 
-        '<div class = "readStatus">' + 'Book read: <br> <input type="checkbox" id = "readStatus" name="readStatus " '+ checkStatus + '>' + 
+        '<div class = "readStatus">' + 'Book read: <br> <input type="checkbox" id = "book' +bookID + '" onclick="EditReadStatus('+ bookID +')" name="readStatus " '+ checkStatus + '>' + 
         '</div>' + 
     '</div>';
     return text;
 
 }
 
+function EditReadStatus(bookID){
+    myLibrary[bookID].readStatus = document.getElementById('book' + bookID).checked;
+    console.log(myLibrary[bookID].readStatus);
+    UpdateJson();
+}
 
 function UpdateJson(){
     let myUpdate = JSON.stringify(myLibrary);
