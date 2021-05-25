@@ -67,9 +67,11 @@ function Submit() {
     bookToAdd.title = document.getElementById("title").value;
     bookToAdd.numberOfPages = document.getElementById("numberOfPages").value;
     bookToAdd.readStatus = document.getElementById("readStatus").checked;
-    bookToAdd.url = document.getElementById("url").value;
+    if(document.getElementById("url").value==""){
+        bookToAdd.url = "https://image.shutterstock.com/image-vector/mario-bros-symbol-on-red-600w-480377119.jpg"
+    }
+    else{bookToAdd.url = document.getElementById("url").value;}
     addBookToLibrary(bookToAdd);
-    alert("Book added");
     document.getElementById("formAddBook").reset();
     console.log(myLibrary);
     UpdateJson();

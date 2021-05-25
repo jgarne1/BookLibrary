@@ -45,7 +45,7 @@ body{
 }
 .readStatus{
     position:absolute;
-    top:45%;
+    top:75%;
     left:33%;
 }
 input[type='checkbox'] {
@@ -80,11 +80,13 @@ input[type='checkbox']:hover {
 }
 
 .bookCard{
+    word-wrap:break-word;
+    overflow:hidden;
     position:relative;
+    width:9vmax;
     font-size:1vmax;
     border : 2px solid green;
     border-radius: 7px;
-    width: auto;
     padding:2vmax; 
     padding-bottom: 5vmax;
     margin-bottom: 10px;
@@ -112,6 +114,7 @@ input[type='checkbox']:hover {
     height:45%;
     margin-top: -30%;
     margin-left: -15%;
+    margin-right:-40%;
 }
 
 
