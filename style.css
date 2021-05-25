@@ -1,4 +1,7 @@
 
+body{
+    font-family: fantasy;
+}
 .header{
     opacity:.4;
     background:no-repeat center;
@@ -65,7 +68,7 @@ input[type='checkbox']:hover {
 .form {
     border-width:1px;
     border-color:lawngreen;
-    background-color:lemonchiffon;
+    background-color:;
 }
 
 .bookCard{
