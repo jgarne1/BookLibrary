@@ -2,7 +2,7 @@
 	"title": "The Hobbit",
 	"author": "Tolkien",
 	"numberOfPages": 27,
-	"isRead": true,
+	"isRead": false,
 	"url":"https://images-na.ssl-images-amazon.com/images/I/51uLvJlKpNL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg"
 }, {
 	"title": "The LotR",
