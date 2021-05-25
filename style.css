@@ -84,6 +84,7 @@ input[type='checkbox']:hover {
     overflow:hidden;
     position:relative;
     width:9vmax;
+    height:13vmax;
     font-size:1vmax;
     border : 2px solid green;
     border-radius: 7px;
