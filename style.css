@@ -1,0 +1,107 @@
+
+.header{
+    opacity:.4;
+    background:no-repeat center;
+    background-size:cover;
+    top:0px;
+    right:0px;
+    left:0px;
+    bottom:0px;
+    height:80px;
+    width:auto;
+    position: absolute;
+    background-image: url(https://www.pegkehret.com/wp-content/uploads/JLF2-Pegs-Header-cropped-bookshelf-banner1-e1466115494449.png);
+}
+
+.myButton {
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+    width:100%;
+}
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.readStatus{
+    position:absolute;
+    top:45%;
+    left:33%;
+}
+input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:3vmax;
+    height:3vmax;
+    background:red;
+    border-radius:5px;
+    border:2px solid #555;
+}
+input[type='checkbox']:checked {
+    background: Green;
+}
+input[type='checkbox']:hover {
+    border-width:7px;
+}
+.bookFields {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form {
+    border-width:1px;
+    border-color:lawngreen;
+    background-color:lemonchiffon;
+}
+
+.bookCard{
+    position:relative;
+    font-size:1vmax;
+    border : 2px solid green;
+    border-radius: 7px;
+    width: auto;
+    padding:2vmax; 
+    padding-bottom: 5vmax;
+    margin-bottom: 10px;
+    margin-right:10px;
+}
+#bookCards{
+    display:flex;
+    flex-wrap: wrap;
+}
+.bookBackground{
+    opacity:.3;
+    background:no-repeat center;
+    background-size:cover;
+    top:0px;
+    right:0px;
+    left:0px;
+    bottom:0px;
+    position:absolute;
+    content:"";
+
+}
+.bookCardContent{
+    position:relative;
+    top:0;
+    height:45%;
+    margin-top: -30%;
+    margin-left: -15%;
+}
+
+
+        
