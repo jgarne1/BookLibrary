@@ -17,7 +17,7 @@ body{
     background-image: url(https://www.pegkehret.com/wp-content/uploads/JLF2-Pegs-Header-cropped-bookshelf-banner1-e1466115494449.png);
 }
 .readlabel{
-    position:fixed;
+    position:absolute;
 }
 
 .myButton {
