@@ -1,5 +1,6 @@
 
 body{
+    background-color:silver;
     font-family: fantasy;
 }
 .header{
@@ -15,6 +16,9 @@ body{
     position: absolute;
     background-image: url(https://www.pegkehret.com/wp-content/uploads/JLF2-Pegs-Header-cropped-bookshelf-banner1-e1466115494449.png);
 }
+.readlabel{
+    position:fixed;
+}
 
 .myButton {
 	background-color:#44c767;
@@ -28,7 +32,9 @@ body{
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
-    width:100%;
+    width:50%;
+    margin-left:25%;
+    margin-bottom:10px
 }
 .myButton:hover {
 	background-color:#5cbf2a;
@@ -66,9 +72,11 @@ input[type='checkbox']:hover {
     box-sizing: border-box;
 }
 .form {
+    margin-top:-12px;
+    margin-left:-6px;
     border-width:1px;
     border-color:lawngreen;
-    background-color:;
+    background-color:honeydew;
 }
 
 .bookCard{
