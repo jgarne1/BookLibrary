@@ -91,7 +91,7 @@ function CreateBookCard(book,bookID){
             '<p>' +'Author:' + book.author +'<br> Title:' + book.title +'<br> Number of pages:' + book.numberOfPages  + '<br></p>' + 
         '</div><br>' + 
         '<div class = "readStatus">' + 'Book read: <br> <input type="checkbox" id = "book' +bookID + '" onclick="EditReadStatus('+ bookID +')" name="readStatus " '+ checkStatus + '>' + 
-        '</div>' + 
+        '<input type="button" id = "book' +bookID +'" class="DeleteButton" onclick="DeleteBook('+ bookID +')" value="X">' + '</div>' + 
     '</div>';
     return text;
 
@@ -101,6 +101,16 @@ function EditReadStatus(bookID){
     myLibrary[bookID].readStatus = document.getElementById('book' + bookID).checked;
     console.log(myLibrary[bookID].readStatus);
     UpdateJson();
+}
+
+
+function DeleteBook(bookID){
+    if (confirm("Delete " + myLibrary[bookID].title + "?"))
+    {
+        myLibrary.splice(bookID,1)
+    }
+    UpdateJson();
+    displayBooks();
 }
 
 function UpdateJson(){

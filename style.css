@@ -36,6 +36,12 @@ body{
     margin-left:25%;
     margin-bottom:10px
 }
+.DeleteButton {
+font-size:6px;
+position:absolute;
+bottom: 218px;
+right:-42px;
+}
 .myButton:hover {
 	background-color:#5cbf2a;
 }
