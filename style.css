@@ -36,13 +36,70 @@ body{
     margin-left:25%;
     margin-bottom:10px
 }
+.EditButtons {
+    position:relative;
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+    width:10%;
+    margin-left:25%;
+    margin-bottom:10px
+}
+.EditButtons:hover {
+	background-color:#50e704;
+}
+.EditButtons:active {
+	top:1px;
+}
+.EditbookFields {
+    width: 99%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left:5px;
+}
+#EditForm {
+    opacity:100%;
+    color:white;
+    border-radius: 20px;
+    position:absolute;
+    display:inline-flexbox;
+    right:.3vmax;
+    width:50vmax;
+    border-color: lawngreen;
+    margin-top:-12px;
+    margin-left:-6px;
+    border-width:1px;
+    background-color:rgba(0,0,0,0.7);
+    z-index: 1;
+    left:25vmax;
+    bottom:5vmax;
+}
 .DeleteButton {
 border-radius:3px;
-font-size:.3vmax;
+font-size:.5vmax;
 position:relative;
-right:-4.35vmax;
-top:-19.55vmax;
+right:-9.2vmax;
+top:-7.85vmax;
 }
+.EditButton {
+    border-radius:3px;
+    font-size:.7vmax;
+    position:relative;
+    right:-2.65vmax;
+    top:-.4vmax;
+    }
 .myButton:hover {
 	background-color:#5cbf2a;
 }
@@ -70,18 +127,20 @@ input[type='checkbox']:hover {
     border-width:7px;
 }
 .bookFields {
-    width: 100%;
+    width: 99%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    margin-left: 5px;
 }
 .form {
+    width:100%;
     margin-top:-12px;
-    margin-left:-6px;
     border-width:1px;
+    border-radius:10px;
     border-color:lawngreen;
     background-color:honeydew;
 }
@@ -124,6 +183,3 @@ input[type='checkbox']:hover {
     margin-left: -15%;
     margin-right:-40%;
 }
-
-
-        

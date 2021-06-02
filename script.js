@@ -58,6 +58,9 @@ function displayBooks() {
     text +="</div>";
     //document.getElementById("bookList").innerHTML = text;
     document.getElementById("bookCards").innerHTML = text;
+    //hide popup
+
+
 };
 
 
@@ -85,22 +88,50 @@ function CreateBookCard(book,bookID){
     if (book.readStatus){
         checkStatus="checked";
     }
-    let text = 
-    '<div class="bookCard">' + '<div class=bookBackground style="background-image:url(' + book.url + ');">' + '</div>'+ 
+    let  cardBackground = '<div class=bookBackground style="background-image:url(' + book.url + ');">' + '</div>';
+    let cardAuthor = 'Author:' + book.author;
+    let cardTitle = 'Title:' + book.title;
+    let cardPages = 'Number of pages:' + book.numberOfPages;
+    let cardReadStatus = '<div class = "readStatus">' + 'Book read: <br> <input type="checkbox" id = "book' +bookID + '" onclick="EditReadStatus('+ bookID +')" name="readStatus " '+ checkStatus + '>';
+    let cardDeleteBTN = '<input type="button" id = "book' +bookID +'" class="DeleteButton" onclick="DeleteBook('+ bookID +')" value="X">';
+    let cardEditBTN = '<input type="button" id = "book' +bookID +'" class="EditButton" onclick="editShowForm('+ bookID +')" value="Edit">' + '</div>';
+    let builtCard = 
+    '<div class="bookCard">' + cardBackground + 
         '<div class = bookCardContent>' + 
-            '<p>' +'Author:' + book.author +'<br> Title:' + book.title +'<br> Number of pages:' + book.numberOfPages  + '<br></p>' + 
+            '<p>' + cardAuthor+  '<br>' + cardTitle +'<br>' + cardPages + '<br></p>' + 
         '</div><br>' + 
-        '<div class = "readStatus">' + 'Book read: <br> <input type="checkbox" id = "book' +bookID + '" onclick="EditReadStatus('+ bookID +')" name="readStatus " '+ checkStatus + '>' + 
-        '<input type="button" id = "book' +bookID +'" class="DeleteButton" onclick="DeleteBook('+ bookID +')" value="X">' + '</div>' + 
-    '</div>';
-    return text;
+        cardReadStatus + cardEditBTN + cardDeleteBTN
+    +'</div>';
+    return builtCard;
 
+}
+
+function editShowForm(bookID){  
+    let text ='<div id ="EditForm">' +
+        '<form class="EditForm">' +
+            '<h5>Edit book</h5>' +
+            '<label for ="editTitle">Title</label>' +
+            '<input type="text" id="editTitle" class ="EditbookFields" name="title" required value="' + myLibrary[bookID].title + '"><br>' +
+            '<label for ="editAuthor">Author</label>' +
+            '<input type="text" id="editAuthor" class ="EditbookFields" name="author" required value="' + myLibrary[bookID].author + '"><br>' +
+            '<label for ="editNumberOfPages">Number of pages</label>' +
+            '<input type="number" id ="editNumberOfPages" class ="EditbookFields" name="numberOfPages" value="' + myLibrary[bookID].numberOfPages + '"><br>' +
+            '<label for ="editUrl">Image URL</label>' +
+            '<input type="text" id ="editUrl" class ="EditbookFields" name="URL" value="' + myLibrary[bookID].url + '" required><br>' +
+            '<br><br>' +
+            '<input type="button" class="EditButtons" onclick="EditBook(' + bookID +')" value="Save">' + 
+            '<input type="button" class="EditButtons" onclick="closeEditBook()" value="Cancel">' +
+        '</form>' +
+   '</div> ' ;
+document.getElementById('editPopUp').innerHTML = text;
+document.getElementById('editPopUp').style.display = "block";
 }
 
 function EditReadStatus(bookID){
     myLibrary[bookID].readStatus = document.getElementById('book' + bookID).checked;
     console.log(myLibrary[bookID].readStatus);
     UpdateJson();
+    displayBooks();
 }
 
 
@@ -112,6 +143,23 @@ function DeleteBook(bookID){
     UpdateJson();
     displayBooks();
 }
+
+function EditBook(bookID){
+    window.alert(bookID);
+   myLibrary[bookID].title = document.getElementById("editTitle").value;
+   myLibrary[bookID].author = document.getElementById("editAuthor").value;
+   myLibrary[bookID].numberOfPages = document.getElementById("editNumberOfPages").value;
+   myLibrary[bookID].url = document.getElementById("editUrl").value;
+   UpdateJson();
+   closeEditBook();
+   displayBooks();
+
+}
+
+function closeEditBook(){
+    document.getElementById('editPopUp').style.display = "none";
+}
+
 
 function UpdateJson(){
     let myUpdate = JSON.stringify(myLibrary);
