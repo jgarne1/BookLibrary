@@ -145,7 +145,6 @@ function DeleteBook(bookID){
 }
 
 function EditBook(bookID){
-    window.alert(bookID);
    myLibrary[bookID].title = document.getElementById("editTitle").value;
    myLibrary[bookID].author = document.getElementById("editAuthor").value;
    myLibrary[bookID].numberOfPages = document.getElementById("editNumberOfPages").value;

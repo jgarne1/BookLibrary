@@ -1,6 +1,6 @@
 
 body{
-    background-color:silver;
+    background: linear-gradient(10deg, rgba(107, 104, 105, 0.7) 15%, rgba(139, 130, 130, 0.8) 35%, rgba(80, 123, 128, 0.7) 86%);
     font-family: fantasy;
 }
 .header{
@@ -19,13 +19,12 @@ body{
 .readlabel{
     position:absolute;
 }
-
 .myButton {
 	background-color:#44c767;
 	border-radius:28px;
 	border:1px solid #18ab29;
 	display:inline-block;
-	cursor:pointer;
+	cursor:copy;
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
@@ -46,7 +45,7 @@ body{
 	color:#ffffff;
 	font-family:Arial;
 	font-size:.8vmax;
-	padding:16px 31px;
+	padding:16px 0px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
     width:10%;
@@ -60,7 +59,7 @@ body{
 	top:1px;
 }
 .EditbookFields {
-    width: 99%;
+    width: 98%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -75,16 +74,17 @@ body{
     position:fixed;
     top:50%;
     left:0%;
-    transform:translate(3%,-50%);
+    transform:translate(8%,-50%);
     display:inline-block;
     align-items: center;
-    width:50vmax;
+    width:45vmax;
     border-style:groove;
     border-color:whitesmoke;
     margin-top:-12px;
     margin-left:-6px;
     border-width:4px;
-    background-color:rgba(0,0,0,0.7);
+    background: rgb(2,0,36);
+    background: linear-gradient(10deg, rgba(131, 143, 137, 0.7) 15%, rgba(3, 3, 3, 0.8) 35%, rgba(38,47,48,.7) 86%);
     z-index: 1;
 }
 .DeleteButton {
@@ -138,14 +138,14 @@ input[type='checkbox']:hover {
     margin-left: 5px;
 }
 .form {
-    width:100%;
+    width:100.8%;
+    margin-left:-6px;
     margin-top:-12px;
     border-width:1px;
-    border-radius:10px;
+    border-radius:0px;
     border-color:lawngreen;
-    background-color:honeydew;
+    background: linear-gradient(20deg, rgba(139, 111, 54, 0.3) 13%, rgba(223, 185, 114, 0.3) 20%, rgba(38,47,48,.4) 100%);
 }
-
 .bookCard{
     word-wrap:break-word;
     overflow:hidden;
